@@ -6,7 +6,7 @@ import time
 
 # --- 설정 및 초기화 ---
 st.set_page_config(
-    page_title="FaceCheck EDU by SPARTA (UI Mockup)",
+    page_title="FaceCheck EDU by SPARTA",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -29,26 +29,14 @@ st.sidebar.slider(
 st.sidebar.markdown("---")
 st.sidebar.header("서비스 정보")
 st.sidebar.info("""
-    **FaceCheck EDU**는 온라인 학습 환경에서 부정 출결을 방지하고, 
-    학습자의 실시간 출석 상태 및 수업 참여 이력을 정확하게 기록하는 AI 서비스입니다.
-    
-    _본 페이지는 웹캠 기능이 제외된 **UI 시안(Mockup)**입니다._
+    **FaceCheck EDU**는 온라인 학습 환경에서 대리 출석, 영상 도용 등 부정 출결을 방지하고, 
+    학습자의 실시간 출석 상태 및 수업 참여 이력을 정확하게 기록합니다.
+    관리자는 대시보드를 통해 수강생 출석 신뢰도를 한눈에 파악할 수 있습니다.
 """)
 
 
 # --- 메인 페이지 제목 및 설명 ---
 st.title("🎓 FaceCheck EDU: 온라인 교육 출결 관리 시스템")
-st.markdown(f"""
-    <p style="font-size:1.1em; color:#555;">
-    **AI 기반 기술**을 활용하여 온라인 교육 환경에서 **부정 출결을 방지**하고, 
-    **학습자의 실시간 출석 상태 및 수업 참여 이력을 정확하게 기록**합니다.
-    관리자는 대시보드를 통해 수강생 출석 신뢰도를 한눈에 파악할 수 있습니다.
-    </p>
-    <p style="font-size:0.9em; color:#e8344e; font-weight:bold;">
-    *SPARTA 로고의 핵심 컬러를 사용하여 UI 디자인을 강화했습니다.*
-    </p>
-    <hr style="border:1px solid #eee;">
-""", unsafe_allow_html=True)
 
 
 # --- 출석 확인 섹션 ---
@@ -65,7 +53,6 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.subheader("🖥️ 시연 화면")
     # 웹캠 대신 시뮬레이션 이미지 또는 메시지
-    # 로고 컬러와 통일성을 위해 플레이스홀더 색상 변경
     st.image("https://via.placeholder.com/640x480/e8344e/ffffff?text=Webcam+Feed+Simulation", 
              caption="웹캠 화면 시뮬레이션 (AI 얼굴 인식 동작 시연)", use_column_width=True)
     
@@ -165,14 +152,5 @@ else:
 
 st.markdown("<hr style='border:1px solid #eee;'>", unsafe_allow_html=True)
 
-# --- 기술 스택 및 저작권 ---
-st.subheader("🛠️ 주요 기술 스택 (제안서 포함용)")
-st.markdown("""
-* **프론트엔드**: `Streamlit` (빠른 프로토타이핑 및 UI 구현)
-* **핵심 AI**: `FaceNet`, `MediaPipe`, `OpenCV`, `Dlib` (향후 적용 예정)
-* **백엔드**: `FastAPI` / `Django` + `PostgreSQL` (향후 적용 예정)
-* **보안**: `JWT`, `AES 암호화`, `HTTPS`, `사용자 권한 분리` (향후 적용 예정)
-* **배포**: `AWS` / `Azure` + `CI/CD` (향후 적용 예정)
-""")
-
+# --- 저작권 ---
 st.markdown(f"<p style='text-align:center; color:#777; font-size:0.8em;'>© 2025 FaceCheck EDU. Powered by <span style='color:#e8344e; font-weight:bold;'>SPARTA</span>. All rights reserved.</p>", unsafe_allow_html=True)
