@@ -39,12 +39,9 @@ st.sidebar.info("""
 st.title("🎓 FaceCheck EDU: 온라인 교육 출결 관리 시스템")
 st.markdown(f"""
     <p style="font-size:1.1em; color:#555;">
-    **AI 기반 기술**을 활용하여 온라인 교육 환경에서 **부정 출결을 방지**하고, 
-    **학습자의 실시간 출석 상태 및 수업 참여 이력을 정확하게 기록**합니다.
+    AI 기술을 활용하여 온라인 교육 환경에서 부정 출결을 방지하고, 
+    학습자의 실시간 출석 상태 및 수업 참여 이력을 정확하게 기록합니다.
     관리자는 대시보드를 통해 수강생 출석 신뢰도를 한눈에 파악할 수 있습니다.
-    </p>
-    <p style="font-size:0.9em; color:#e8344e; font-weight:bold;">
-    *SPARTA 로고의 핵심 컬러를 사용하여 UI 디자인을 강화했습니다.*
     </p>
     <hr style="border:1px solid #eee;">
 """, unsafe_allow_html=True)
